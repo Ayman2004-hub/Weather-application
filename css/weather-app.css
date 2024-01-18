@@ -180,8 +180,8 @@ body {
 
 .logo {
     position: absolute;
-    top: 20px;
+    top: 10px;
     left: 10px;
-    width: 75px;
-    height: 75px;
+    width: 100px;
+    height: 100px;
 }
