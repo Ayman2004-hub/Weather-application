@@ -40,6 +40,25 @@ async function checkWeather(city) {
         humidity.innerHTML = `${weatherData.main.humidity}%`;
         windSpeed.innerHTML = `${weatherData.wind.speed}Km/H`;
 
+        // Set weather image based on weather conditions
+        switch (weatherData.weather[0].main) {
+            case 'Clouds':
+                weatherImg.src = "/assets/cloud.png";
+                break;
+            case 'Clear':
+                weatherImg.src = "/assets/clear.png";
+                break;
+            case 'Rain':
+                weatherImg.src = "/assets/rain.png";
+                break;
+            case 'Mist':
+                weatherImg.src = "/assets/mist.png";
+                break;
+            case 'Snow':
+                weatherImg.src = "/assets/snow.png";
+                break;
+        }
+
     } catch (error) {
         // Handle errors in fetching weather data
         console.error("Error fetching weather data:", error);
