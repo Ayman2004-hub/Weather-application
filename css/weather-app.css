@@ -12,15 +12,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000;
 }
 
 .container {
     width: 400px;
     height: min-content;
-    background-color: #fff;
+    background-color: khaki;
     border-radius: 12px;
     padding: 28px;
+    color: #fff;
 }
 
 .search-box {
@@ -101,34 +101,35 @@ body {
     margin-top: 30px;
 }
 
-.weather-details i{
+.weather-details i {
     font-size: 36px;
 }
 
-.weather-details .text{
+.weather-details .text {
     margin-left: 10px;
     font-size: 16px;
 }
 
-.humidity, .wind{
+.humidity,
+.wind {
     display: flex;
     align-items: center;
 }
 
-.humidity{
+.humidity {
     margin-left: 20px;
 }
 
-.wind{
+.wind {
     margin-right: 20px;
 }
 
-.text span{
+.text span {
     font-size: 20px;
     font-weight: 700;
 }
 
-.location-not-found{
+.location-not-found {
     margin-top: 20px;
     display: none;
     align-items: center;
@@ -136,11 +137,51 @@ body {
     flex-direction: column;
 }
 
-.location-not-found h1{
+.location-not-found h1 {
     font-size: 20px;
     color: #6b6b6b;
     margin-block-end: 15px;
 }
-.location-not-found img{
+
+.location-not-found img {
     width: 80%;
+}
+
+.header-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: khaki;
+    color: white;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.header h2{
+    text-align: center;
+}
+
+.link-for-info {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+.town-info {
+    position: absolute;
+    left: 150px;
+}
+
+.week-info {
+    position: absolute;
+    left: 350px;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    width: 75px;
+    height: 75px;
 }
