@@ -32,6 +32,14 @@ async function checkWeather(city) {
             return;
         }
 
+        // Display weather information
+        locationNotFound.style.display = "none";
+        weatherBody.style.display = "flex";
+        temperature.innerHTML = `${Math.round(weatherData.main.temp - 273.15)}°C`;
+        description.innerHTML = `${weatherData.weather[0].description}`;
+        humidity.innerHTML = `${weatherData.main.humidity}%`;
+        windSpeed.innerHTML = `${weatherData.wind.speed}Km/H`;
+
     } catch (error) {
         // Handle errors in fetching weather data
         console.error("Error fetching weather data:", error);
