@@ -25,6 +25,13 @@ async function checkWeather(city) {
         // Log the entire weather data object
         console.log("Weather Data:", weatherData);
 
+        // Check if the location is not found (404 error)
+        if (weatherData.cod === '404') {
+            locationNotFound.style.display = "flex";
+            weatherBody.style.display = "none";
+            return;
+        }
+
     } catch (error) {
         // Handle errors in fetching weather data
         console.error("Error fetching weather data:", error);
@@ -35,7 +42,7 @@ async function checkWeather(city) {
 searchBtn.addEventListener('click', () => {
     // Get the city from the input box
     const city = inputBox.value.trim();
-    
+
     // Check if the input is not empty
     if (city) {
         // Call the function to check the weather for the specified city
