@@ -100,3 +100,25 @@ body {
     justify-content: space-between;
     margin-top: 30px;
 }
+
+.weather-details i{
+    font-size: 36px;
+}
+
+.weather-details .text{
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.humidity, .wind{
+    display: flex;
+    align-items: center;
+}
+
+.humidity{
+    margin-left: 20px;
+}
+
+.wind{
+    margin-right: 20px;
+}
